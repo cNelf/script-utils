@@ -1,0 +1,24 @@
+<html>
+  <body>
+    <div id="app">
+      <span>姓名：{{ name }}</span>
+      <input type="text" v-model="name"></input>
+      <span>爱好：{{ more.like }}</span>
+      <input type="text" v-model="more.like"></input>
+    </div>
+
+    <script src="./index.js"></script>
+
+    <script>
+      const vm = new Vue({
+        el: '#app',
+        data: {
+          name: 'Jason',
+          more: {
+            like: 'read book'
+          }
+        }
+      })
+    </script>
+  </body>
+</html>
