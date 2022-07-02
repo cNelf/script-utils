@@ -1,2 +1,2 @@
-# script-utils
+# script-snippets
 writing script practice
