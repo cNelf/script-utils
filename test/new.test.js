@@ -8,7 +8,7 @@ function Person(name) {
 const person1 = new Person('Jason');
 const person2 = myNew(Person, 'Nick');
 
-test('test custom new function', () => {
+test('test new', () => {
   expect(person1).toEqual({ name: 'Jason', age: 18 });
   expect(person2).toEqual({ name: 'Nick', age: 18 });
 });

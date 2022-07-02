@@ -8,7 +8,7 @@ function func() {
   return this.a;
 }
 
-test('test new function', () => {
+test('test new', () => {
   expect(func.bind(obj)()).toBe(1);
   expect(bind(func, obj)()).toBe(1);
 });

@@ -1,4 +1,4 @@
-export function ajax(url, method) {
+function ajax(url, method) {
   return new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest();
     xhr.open(method, url, true);
@@ -10,3 +10,5 @@ export function ajax(url, method) {
     xhr.send();
   });
 }
+
+module.exports = ajax;

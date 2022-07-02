@@ -1,9 +1,11 @@
-export function debounce(func, delay) {
+function debounce(func, delay) {
   let timer = null;
-  return function(...args) {
+  return function (...args) {
     timer && clearTimeout(timer);
     timer = setTimeout(() => {
       func.apply(this, args);
     }, delay);
-  }
+  };
 }
+
+module.exports = debounce;

@@ -1,12 +1,12 @@
-export function throttle(func, delay) {
+function throttle(func, delay) {
   let timer = null;
   let savedArgs, savedThis;
-  const wrapper = function(...args) {
+  const wrapper = function (...args) {
     if (timer) {
       savedArgs = args;
       savedThis = this;
       return;
-    };
+    }
     func.apply(this, args);
     timer = setTimeout(() => {
       if (savedArgs) {
@@ -15,7 +15,9 @@ export function throttle(func, delay) {
         savedThis = null;
       }
       timer = null;
-    }, delay)
-  }
+    }, delay);
+  };
   return wrapper;
 }
+
+module.exports = throttle;
